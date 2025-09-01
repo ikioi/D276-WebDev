@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume</title>
+    <link rel="icon" href="images/created_favicon.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/master.css">
+
+        <!--Top navigation links to sections in article.-->
+    <nav aria-label="On-page"> <!-- adding aria-label for duplicate nav names -->
+        <ul class="toc">
+            <li><a href="#Overview">Overview</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Edgio">Edgio</a></li>
+            <li><a href="#Amentum">Amentum</a></li>
+            <li><a href="#Vision">Vision</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#footer">End</a></li>
+        </ul>
+    </nav>       
+</head>
+
+<body>
+    <div id="currentDate"></div>
+    <header>
+        <h1>Brett Hummell</h1>
+        <p><em>Cover letter and career goals can be found here.</em></p>
+        <nav>
+            <ul>
+                <li><a class="nav-link" href="cover-letter.html">Cover Letter</a></li>
+                <li><a class="nav-link" href="career-goals.html">Career Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Overview">
+            <h2>About Me</h2>
+            <p style="white-space: pre-line;"><strong>Bilingual Japanese/English IT Engineer with 8 years of experience in Operations, Networking, and Cyber Security.</strong></p>
+        </section>
+        <hr>
+        <section id="Skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills">
+                <li><strong>Cloud & Infrastructure: </strong>AWS, Azure, CDN Architecture, TLS, WAF, VPN, Load Balancing, Web Servers</li>
+                <li><strong>Automation & Scripting: </strong>Bash, Python, Spark SQL, JavaScript, PowerShell, HTML</li>
+                <li><strong>Monitoring & Analysis: </strong>Grafana, Cacti, Edge Insights, SIEM, Wireshark</li>
+                <li><strong>Networking & Security: </strong>DNS, ACL, TCP/IP, dig/mtr/curl, HAR, DDoS, Incident Response</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="Edgio">
+            <h2>Edgio</h2>
+            <h3><em>Incident Management Engineer</em></h3>
+            <ul>
+                <li>Led global impact bridges for enterprise customers, coordinating outages and issues across global edge servers.</li>
+                <li>Subject matter expert for SSL deployment, handling <strong>95-98%</strong> of all certificate management globally.</li>
+                <li>Automated operational workflows using Bash & Python.</li>
+                <li>Sole operations engineer tasked with managing customer's Radware security configurations.</li>
+            </ul>
+        </section>
+        
+        <section id="Amentum">
+            <h2>Amentum</h2>
+            <h3><em>Vulnerability Remediation Analyst</em></h3>
+            <ul>
+                <li>Managed Tenable SIEM to remediate application and security vulnerabilities.</li>
+                <li>Performed vulnerability threat and risk audits.</li>
+                <li>Worked with DevOps team to deploy patch management and automation tools via SCCM updates.</li>
+            </ul>
+        </section>
+       
+        <section id="Vision">
+            <h2>Vision</h2>
+            <h3><em>Technology Service Specialist</em></h3>
+            <ul>
+                <li>Escalation technician designated to resolve technology issues encompassing all middle schools in the ISD.</li>
+                <li>Led company-wide upgrade to new OS management system.</li>
+                <li>Performed general technology troubleshooting, repair, and lab setup.</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="Education">
+            <h2>Education</h2>
+            <h3>BS Cloud Computing - AWS track | In Progress - Western Governors University</h3>
+        </section>
+       
+        <!-- Certification table. -->
+        <section>
+            <table border="1">
+                <caption><strong>Certifications</strong></caption>
+                <thead>
+                    <tr>
+                        <th>CompTIA</th>
+                        <td>A+</td>
+                        <td>Network+</td>
+                        <td>Security+</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Cloud</th>
+                        <td>Linux+</td>
+                        <td>AZ-900</td>
+                        <td>Cloud+</td>
+                    </tr>
+                    <tr>
+                        <th>AWS</th>
+                        <td>CCP</td>
+                        <td>SAA</td>
+                        <td>SysOps</td>
+                    </tr>
+                    <tr>
+                        <th>Management</th>
+                        <td>ITIL 4</td>
+                        <td>Project+</td>
+                        <td>Scrum Master</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <article>
+            <h4>References available upon request.</h4>
+        </article>
+    </main>
+    <footer id="footer">
+        <span><em>Resume<br> <a href="mailto:"><em>EmailMe</em></a></em></span>
+    </footer>
+</body>
+<!--script to get date -->
+<script>
+    document.getElementById("currentDate").textContent = "Date: " + new Date().toDateString();
+    console.log("Date injected successfully")
+</script>
+
+</html>
