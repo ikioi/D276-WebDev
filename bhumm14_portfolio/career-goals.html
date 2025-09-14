@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Goals</title>
+  <link rel="icon" href="images/created_favicon.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="css/master.css">
+
+   <nav aria-label="On-page"> <!-- adding aria-label for duplicate nav names -->
+        <ul class="toc">
+            <li><a href="#audio">Audio</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#certs">Certs</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#footer">End</a></li>
+        </ul>
+    </nav>       
+</head>
+<body>
+  <header>
+    <h1>Career Goals</h1>
+    <p><em>Current career growth goals at AWS</em></p>
+
+    <!-- Site nav linking to other portfolio documents -->
+    <nav aria-label="Site"> <!-- aria nav to avoid duplicates -->
+      <ul>
+        <li><a class="nav-link" href="resume.html">Resume</a></li>
+        <li><a class="nav-link" href="cover-letter.html">Cover Letter</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <!-- Audio with citation -->
+    <section id="audio">
+      <h2>Lo-fi Background Audio</h2>
+      <h4 style="color:rgb(145, 145, 145);">Feel free to play some relaxing music while you read over my documents</h4>
+      <figure class="audio-card">
+        <audio id="bgAudio" controls loop preload="metadata">
+            <source src="media/lofi-ambient-music.mp3" type="audio/mpeg">
+            Your browser doesn’t support the audio element.
+        </audio>
+        <figcaption>
+            <cite>
+                <a href="https://pixabay.com/music/beats-lofi-girl-lofi-ambient-music-365952/"
+                target="_blank">
+                Lofi Girl
+                </a>
+            </cite>
+            by
+            <a href="https://pixabay.com/users/lofidreams99-49234941/"
+                target="_blank">lofidreams99</a>,
+            via <a href="https://pixabay.com/music/search/lofi/" target="_blank">Pixabay</a>.
+            <span class="license-note">Pixabay License (attribution appreciated).</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <hr>
+    <!-- Goals overview -->
+    <section id="goals">
+      <h2>Near-Term Career Goals (6–12 months)</h2>
+      <h5>6 months</h5>
+      <p> Deepen my skills in <strong>cloud operations</strong>, <strong>observability</strong>,
+        and <strong>CI/CD</strong> while earning additional certifications in AWS.
+        Build more hands-on projects with <em>python scripting (IaC)</em>, automation,
+        and incident detection and response playbooks.
+      </p>
+      <h5>1 year</h5>
+      <p>
+        <ul>
+            <li>Get promoted to an L5 engineer.</li>
+            <li>Help create the new IDR pipelines.</li>
+            <li>Acquire 4 AWS certifications.</li>
+        </ul> 
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- Image with citation -->
+    <section id="certs">
+        <h2>Certification Goals</h2>
+        <!-- it seems figure and figcaption are needed for citations -->
+        <ul class="certGrid">
+            <li>
+            <figure class="cert">
+                <img 
+                    src="images/AWS_cloud_practitioner.png"
+                    alt="AWS Certified Cloud Practitioner badge">
+                <figcaption>
+                <cite><a href="https://aws.amazon.com/certification/" target="_blank">
+                    AWS Certified Cloud Practitioner
+                </a></cite><br>Source: AWS Certification
+                </figcaption>
+            </figure>
+            </li>
+
+            <li>
+            <figure class="cert">
+                <img 
+                    src="images/AWS_SAA.png"
+                    alt="AWS Certified Solutions Architect – Associate badge">
+                <figcaption>
+                <cite><a href="https://aws.amazon.com/certification/" target="_blank">
+                    AWS Certified Solutions Architect – Associate
+                </a></cite><br>Source: AWS Certification
+                </figcaption>
+            </figure>
+            </li>
+
+            <li>
+            <figure class="cert">
+                <img 
+                    src="images/AWS_SysOps.png"
+                    alt="AWS Certified SysOps Administrator – Associate badge">
+                <figcaption>
+                <cite><a href="https://aws.amazon.com/certification/" target="_blank">
+                    AWS Certified SysOps Administrator – Associate
+                </a></cite><br>Source: AWS Certification
+                </figcaption>
+            </figure>
+            </li>
+
+            <li>
+            <figure class="cert">
+                <img 
+                    src="images/AWS_Dev.png"
+                    alt="AWS Certified Developer – Associate badge">
+                <figcaption>
+                <cite><a href="https://aws.amazon.com/certification/" target="_blank">
+                    AWS Certified Developer – Associate
+                </a></cite><br>Source: AWS Certification
+                </figcaption>
+            </figure>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Self Video -->
+    <section id="video">
+      <h2>Short Video</h2>
+        <video src="media/career-video.mp4" controls width="200">
+          Sorry, your browser doesn’t support embedded videos.
+        </video>
+    </section>
+
+    <hr>
+
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <!-- URL from rubric -->
+      <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+        <!-- using div to separate each field -->
+
+        <div class="form-row">
+          <label for="first">First Name</label>
+          <input id="first" name="first_name" type="text" required>
+        </div>
+
+        <div class="form-row">
+          <label for="last">Last Name</label>
+          <input id="last" name="last_name" type="text" required>
+        </div>
+
+        <div class="form-row">
+          <label for="company">Company Name</label>
+          <input id="company" name="company_name" type="text">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="555-555-5555">
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Let us know if you need anything"></textarea>
+        </div>
+
+        <fieldset class="form-row">
+          <legend>Best Contact Time</legend>
+
+          <label><input type="radio" name="best_time" value="am"> a.m.</label>
+          <label><input type="radio" name="best_time" value="pm"> p.m.</label>
+          <label><input type="radio" name="best_time" value="anytime"> anytime</label>
+        </fieldset>
+
+        <div class="form-row">
+          <label for="preferred">Preferred Contact Method</label>
+          <select id="preferred" name="contact_method" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
+            <option value="text">Text</option>
+          </select>
+        </div>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>© 2025 Brett Hummell</p>
+  </footer>
+</body>
+</html>

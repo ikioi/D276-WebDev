@@ -1,0 +1,517 @@
+/*  Universal selector  */
+*, *::before, *::after { box-sizing: border-box; }
+
+/*  Element selectors + typography + background  */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;                         /* margin */
+  font-family: system-ui, Arial, sans-serif;   /*font */
+  color: #000000;
+  background-color: #ecc7f1;
+  line-height: 1.6;
+}
+h1, h2, h3 { margin: 0 0 .5rem; }
+p { margin: 0 0 1rem; }
+em { font-style: italic; }       /* typography: font-style */
+
+/*  Nav (element + descendant + class + pseudo-class)  */
+nav { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; }
+.nav-link {          /* class selector */
+  display: inline-block;
+  padding: .35rem .65rem;
+  border: 1px solid #c6cfdb;
+  border-radius: .5rem;
+  text-decoration: none;
+  color: #0f172a;
+  background-color: #f6fcf4;
+  transition: background-color .2s, color .2s, box-shadow .2s;
+}
+/* Blue highlight on hover + keyboard focus */
+.nav-link:hover,
+.nav-link:focus-visible {
+  background-color: #e0f2fe;      /* light blue */
+  color: #0c4a6e;                 /* darker blue text for contrast */
+  box-shadow: 0 0 0 3px rgba(13, 158, 224, 0.25); /* small focus ring */
+}
+
+header nav ul {
+  list-style: none;   /* used hide bullets */
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  gap: .5rem;
+}
+
+.toc {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+
+/* Same “pill” look as .nav-link */
+.toc a {
+  display: inline-block;
+  padding: .35rem .65rem;
+  border: 1px solid #ced7e2;
+  border-radius: .15rem;
+  text-decoration: none;
+  color: #000000;
+  background-color: #eaedf3;
+  transition: background-color .2s, color .2s, box-shadow .2s;
+}
+
+/* Same hover/focus styles as .nav-link */
+.toc a:hover,
+.toc a:focus-visible {
+  background-color: #cde7f8;
+  color: #083d5c;   /* darker blue text for contrast */
+  text-decoration: none;     /* ensure no underline on hover */
+  box-shadow: 0 0 0 3px rgba(13, 164, 235, 0.25); /*focus ring */
+}
+
+/* Sections */
+section {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border: 1px solid #d9e3f0;
+  border-radius: .75rem;
+  background-color: #ffffff;
+}
+
+/* Lists */
+ul {
+  list-style: disc inside;
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+}
+ul li { margin: .25rem 0; }
+
+/* removing bullet points from ul in Skills */
+.skills { list-style: none; margin: 0; padding: 0; }
+.skills li { margin: .25rem 0; }
+
+/* IDs */
+#footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px solid #cbd5e1;
+  background-color: #f1f5f9;
+  text-align: center;
+}
+#currentDate {         /* date style */
+  font-size: 1rem;
+  color: #3b4e68;
+}
+
+input, textarea, select {       /* element selectors */
+  width: 100%;
+  max-width: 580px;
+  padding: .5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: .5rem;
+}
+button {
+  padding: .5rem .9rem;
+  border: 1px solid #0aa1e7;
+  border-radius: .5rem;
+  background-color: #e0f2fe;
+  cursor: pointer;
+}
+button:hover {     /* pseudo-class selector */
+  background-color: #b4e3fc;
+}
+
+
+/* Centering the whole page as a 'sheet' */
+html { 
+  background: #e0ebf5;     /* page background color */
+}
+
+body {
+  max-width: 1200px;        /* page width */
+  margin: 0 auto;            /* centers the whole document */
+  padding-inline: clamp(16px, 3vw, 40px);
+  background: #ffffff;         /* 'white paper' */
+  min-height: 100dvh;          /* full viewport height for tall pages */
+  border-left: 1px solid #e7e9ee;     /* page edge */
+  border-right: 1px solid #e7e9ee;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06); /* soft shadow */
+}
+
+/* Ensure media doesn’t force horizontal scrolling */
+img, iframe { max-width: 100%; height: auto; }
+
+section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(180deg, #aec9d8 0%, #ffffff 110%);
+}
+
+.banner {
+  margin: 0 0 1rem;
+  padding: 2.25rem 1rem;              /* banner height */
+  background: linear-gradient(135deg, #cde8fa, #ffffff 80%);
+}
+.banner h1 { margin: 0; }
+
+/* Audio block spacing + full-width player */
+.audio-card { margin: 0 0 1rem; }
+.audio-card audio { width: 100%; display: block; }
+
+/*readable citation */
+.audio-card figcaption { font-size: .9rem; color: #546479; }
+.audio-card .license-note { color: #6d7d94; }
+
+/* Certification badge gallery */
+.certGrid {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 across on wide screens */
+  gap: 1rem;
+}
+
+.cert img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;      /* original aspect ratio of image */
+  object-fit: contain;       /* no cropping */
+  background: #ffffff;
+  border: 1px solid #e7eff8;
+  border-radius: 10px;  
+  padding: 12px;
+}
+
+.cert figcaption {
+  text-align: center;
+  margin-top: .5rem;
+  font-size: .9rem;
+  color: #4a586d;
+}
+
+/* In case viewed on mobile: 2 per row on tablets, 1 per row on phones */
+@media (max-width: 900px) {
+  .certGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .certGrid { grid-template-columns: 1fr; }
+}
+
+/* Contact form   */
+#contact form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* two columns on desktop */
+  gap: 1rem 1.25rem; /* row and column gaps */
+}
+
+#contact .form-row label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .35rem;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact textarea,
+#contact select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .6rem .7rem;
+  border: 1px solid #cad4e0;
+  border-radius: .5rem;  /* set to 0 if you want square corners */
+  background: #ffffff;
+}
+
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 159, 226, 0.25);
+}
+
+/* Make the big elements span both columns */
+#contact textarea,
+#contact fieldset,
+#contact button {
+  grid-column: 1 / -1;
+}
+
+/* Radio group block */
+#contact fieldset {
+  margin: 0;
+  padding: .75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: .5rem;
+}
+#contact fieldset legend {
+  font-weight: 600;
+  padding: 0 .25rem;
+}
+#contact fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-right: 1rem;
+}
+
+/* Submit button */
+#contact button {
+  padding: .6rem 1rem;
+  border: 1px solid #0ea4e9;
+  border-radius: .5rem;
+  background: #ddf0fc;
+  cursor: pointer;
+}
+#contact button:hover {
+  background: #bae6fd;
+}
+
+/* adding extra quality colors and feel */
+
+/* soft field colors  */
+:root {
+  --field-bg: #e0edf7;        /* very light blue */
+  --field-focus-bg: #e6f3ff;  /* slightly stronger on foc */
+  --field-border: #bcc8d6;
+  --field-focus: #0ba0e6;     /* blue accent */
+}
+
+/* base tint */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact textarea,
+#contact select {
+  background: var(--field-bg);
+  border-color: var(--field-border);
+}
+
+/* focus state (keyboard/mouse) */
+#contact :is(input[type="text"], input[type="email"], input[type="tel"], textarea, select):focus {
+  outline: none;
+  background: var(--field-focus-bg);
+  border-color: var(--field-focus);
+  box-shadow: 0 0 0 3px rgba(13, 161, 230, 0.25);
+}
+
+/* make the radio group panel match */
+#contact fieldset {
+  background: #f3f6f8; /* soft gray-blue */
+}
+
+.muted { color:#6b7280; }              /* used for “Current focus” label */
+#about p + p { margin-top:.5rem; }     /* tighter second paragraph in intro */
+#values li + li { margin-top:.25rem; } /* small stacking space */
+
+/* subtle lower-half highlight, keeps text color */
+mark {
+  background: linear-gradient(transparent 60%, #fff3bf 0); /* soft yellow */
+  color: inherit;
+  padding: 0 .12em;
+  border-radius: .15em;
+}
+
+/* dark mode tweak */
+@media (prefers-color-scheme: dark) {
+  mark { background: linear-gradient(transparent 60%, rgba(253, 230, 138, .35) 0); }
+}
+
+/* Let native form controls pick the right theme colors */
+body { color-scheme: light dark; }
+
+/* Auto-dark mode */
+@media (prefers-color-scheme: dark) {
+  html { background: #0b1220; }
+  body {
+    background: #0b1220;           /* page “paper” */
+    color: #e5e7eb;                /* default text */
+    border-left-color: #25324a;    /* if you used page borders */
+    border-right-color: #25324a;
+    box-shadow: none;              /* optional: flatten shadows in dark */
+  }
+
+  /* Sections/cards */
+  section {
+    background: #0f172a;
+    border-color: #25324a;
+  }
+
+  /* Header/footer */
+  #footer {
+    background: #0f172a;
+    border-top-color: #25324a;
+    color: #cbd5e1;
+  }
+
+  /* On-page/site nav links (pills) */
+  .nav-link, .toc a, .top a {
+    background: #0f172a;
+    color: #e5e7eb;
+    border-color: #25324a;
+  }
+  .nav-link:hover, .nav-link:focus-visible,
+  .toc a:hover, .toc a:focus-visible,
+  .top a:hover, .top a:focus-visible {
+    background: #0b2a3a; /* darker blue-ish hover */
+    color: #e6f6ff;
+    box-shadow: 0 0 0 3px rgba(14,165,233,.35);
+  }
+
+  /* Horizontal rule */
+  hr {
+    background: linear-gradient(90deg, #1f2a44, #2a395a, #1f2a44);
+  }
+
+  /* Tables (basic & “card” wrapper) */
+  .table-card {
+    background: #0e1527;
+    border-color: #0e1527;
+    box-shadow: none;
+  }
+  table, .resume-table {
+    background: #0f172a;
+    border-color: #0e1527;
+  }
+  .resume-table caption {
+    background: #0b1220;
+    border-bottom-color: #0e1527;
+    color: #c7e9ff;  /* accent */
+  }
+  .resume-table thead th {
+    background: #1e293b;           /* header strip */
+    color: #e5e7eb;
+  }
+  .resume-table th, .resume-table td {
+    border-bottom-color: #0e1527;
+    color: #e5e7eb;
+  }
+  .resume-table tbody tr:nth-child(even) { background: #0b1220; }
+  .resume-table tbody tr:hover { background: #122033; }
+
+  /* Certification gallery frames */
+  .certGrid img {
+    background: #111b31;
+    border-color: #0e1527;
+  }
+  .certGrid .credit { color: #9aa6b2; }
+
+  /* Audio/video captions */
+  figcaption, .license-note { color: #9aa6b2; }
+
+  /* Forms */
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact input[type="tel"],
+  #contact textarea,
+  #contact select {
+    background: #111b31;
+    color: #e5e7eb;
+    border-color: #334155;
+  }
+  #contact :is(input, textarea, select)::placeholder { color: #8aa0b4; }
+
+  #contact :is(input, textarea, select):focus-visible {
+    border-color: #0ea1e5;
+    box-shadow: 0 0 0 3px rgba(14,165,233,.35);
+    outline: none;
+  }
+  #contact fieldset {
+    background: #0b1220;
+    border-color: #0e1527;
+  }
+  #contact button {
+    background: #103149;
+    border-color: #0ea1e5;
+    color: #e6f6ff;
+  }
+  #contact button:hover { background: #0a2334; }
+
+  /* Nicer <mark> in dark mode (matches earlier suggestion) */
+  mark {
+    background: linear-gradient(transparent 60%, rgba(253, 230, 138, .25) 0);
+    color: inherit;
+  }
+  mark.tag {
+    background: #0b2a3a;
+    color: #c7e9ff;
+    border-color: #134e6f;
+  }
+
+  
+}
+
+
+
+
+/* ########### Dark/light theme toggle ############# */
+
+/* Theme toggle button (fixed in the top-right) */
+.theme-toggle{
+  position: fixed;
+  top: .75rem; right: .75rem;
+  z-index: 9999;
+  padding: .4rem .55rem;
+  border: 1px solid #cbd5e1;
+  border-radius: .5rem;
+  background: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+.theme-toggle:hover { background: #f1f5f9; }
+
+/* Dark-mode look for the button itself when the page is dark */
+html.theme-dark .theme-toggle {
+  background: #0f172a;
+  color: #e5e7eb;
+  border-color: #25324a;
+  box-shadow: none;
+}
+html.theme-dark .theme-toggle:hover { background: #122033; }
+
+/* --- Forced themes (override system) --- */
+html.theme-dark { color-scheme: dark; }
+html.theme-light { color-scheme: light; }
+
+/* Minimal overrides so forcing dark looks right without rewriting your CSS */
+html.theme-dark body { background:#0b1220; color:#e5e7eb; }
+html.theme-dark section { background:#0f172a; border-color:#25324a; }
+html.theme-dark #footer { background:#0f172a; border-top-color:#25324a; color:#cbd5e1; }
+html.theme-dark .nav-link, html.theme-dark .toc a, html.theme-dark .top a {
+  background:#0f172a; color:#e5e7eb; border-color:#25324a;
+}
+html.theme-dark .nav-link:hover, html.theme-dark .toc a:hover, html.theme-dark .top a:hover {
+  background:#0b2a3a; color:#e6f6ff; box-shadow:0 0 0 3px rgba(14,165,233,.35);
+}
+html.theme-dark hr { background: linear-gradient(90deg,#1f2a44,#2a395a,#1f2a44); }
+
+/* Tables (basic) */
+html.theme-dark table { background:#0f172a; }
+html.theme-dark th, html.theme-dark td { color:#e5e7eb; border-bottom-color:#25324a; }
+
+/* Cert gallery frames */
+html.theme-dark .certGrid img { background:#0f172a; border-color:#25324a; }
+html.theme-dark .certGrid .credit, html.theme-dark figcaption, html.theme-dark .license-note { color:#9aa6b2; }
+
+/* Forms */
+html.theme-dark #contact input[type="text"],
+html.theme-dark #contact input[type="email"],
+html.theme-dark #contact input[type="tel"],
+html.theme-dark #contact textarea,
+html.theme-dark #contact select {
+  background:#0f172a; color:#e5e7eb; border-color:#334155;
+}
+html.theme-dark #contact :is(input,textarea,select)::placeholder { color:#8aa0b4; }
+html.theme-dark #contact :is(input,textarea,select):focus-visible {
+  border-color:#0ea5e9; box-shadow:0 0 0 3px rgba(14,165,233,.35); outline: none;
+}
+html.theme-dark #contact fieldset { background:#0b1220; border-color:#25324a; }
+html.theme-dark #contact button { background:#103149; border-color:#0ea5e9; color:#e6f6ff; }
+html.theme-dark #contact button:hover { background:#0a2334; }
